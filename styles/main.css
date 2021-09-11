@@ -27,7 +27,7 @@
 body {
 	margin: 0;
 	line-height: 1.5em;
-	background-image: url("images/bgcode.png");
+	background-image: url("../images/bgcode.png");
 	height: 100vh;
 	background-position: center;
 	background-repeat: repeat;
