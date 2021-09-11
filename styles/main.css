@@ -1,0 +1,280 @@
+  @charset "utf-8";
+/* CSS Document */
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+										COLORS 
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/*
+	#f5f5f5: Very light gray
+	#dddcdc: Light gray
+	#b2b0b0: Gray
+	#4e4e4e: Dark gray
+	#d56a6a: Light red 
+	#aa3939: Red
+	#f2fae2: Extremely light green
+	#e5f5c4: Very light green
+	#a6c663: Light green
+	#7c9f35: Green
+	#557412: Dark green
+*/
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+										FONTS 
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+ @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&family=Zilla+Slab:wght@300;400;600;700&display=swap');
+
+ /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+										GENERAL 
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+body {
+	margin: 0;
+	line-height: 1.5em;
+	background-image: url("images/bgcode.png");
+	height: 100vh;
+	background-position: center;
+	background-repeat: repeat;
+	background-size: cover;
+}
+
+body, select, input, textarea{
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6, button {
+	font-family: 'Zilla Slab', serif;
+	margin: .25em;
+}
+
+#brand{
+	font-weight: 300;
+	color: #d56a6a;
+}
+
+main, mainsection{
+	padding: 1em;
+}
+
+
+h1{
+	font-size: 2em;
+	font-weight: 700;
+}
+
+h2{
+	font-size: 1.5em;
+	font-weight: 600;
+}
+
+h3{
+	font-size: 1.25em;
+}
+
+h4{
+	font-size: 1em;
+}
+
+h5{
+	font-size: .75em;
+}
+
+h6{
+	font-size: .5em;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+										LINKS 
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+a{
+	color: #7c9f35;
+	font-weight: 600;
+	text-decoration: none;
+	transition-duration: .3s;
+	display: inline-block;
+}
+
+a:visited{
+	color: #557412;
+}
+
+a:hover{
+	
+	color: #a6c663;
+}
+.mobile-menu a:hover{
+	transform: translate(-.5em, 0);
+}
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+										HEADER 
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+ header{
+	padding: 1em;
+	background-color: #4e4e4e;
+	color: #dddcdc;
+}
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+										NAVIGATION 
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+#menu-check, #menu{
+	/*opacity: 0;*/
+	
+	background-color: #4e4e4e;
+	color: #e5f5c4;
+	font-weight: 600;
+	text-align: center;
+	border-radius: 5px;
+	transition: opacity 0.5s;
+}
+
+#menu-check{
+	width: 7em;
+	height: 2.5em;
+	opacity: 0;
+}
+
+#menu{
+	width: 5em;
+	height: 1.65em;
+	padding: .25em;
+}
+
+
+@media only screen and (max-width: 599px) {
+  
+	#menu-check, #menu{
+	/*opacity: 0;*/
+		position: fixed;
+		bottom: 1.5em;
+		right: 1.5em;
+	}
+	#menu-check ~ ul{
+		transform: scale(0, 0);
+		position: fixed;
+		bottom: 4em;
+		right: 1.5em;
+		transition: .3s;
+	}
+	
+	#menu-check:checked ~ ul{
+		transform: scale(1, 1);
+	}
+	.mobile-menu > *{
+		background-color: #4e4e4e;
+		border: 1px solid #dddcdc;
+		padding: .75em;
+	}
+	
+	.topnav{
+		border-radius: 5px;
+		color: #dddcdc;
+	}
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+										INTERACTIVE PIECES 
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+button{
+	border-radius: 5px;
+	padding: .5em;
+	font-size: 1.1em;
+	margin: 1em;
+	display: block;
+}
+
+input{
+	width: 100%;
+	border-radius: 5px;
+	padding: .5em;
+	margin: .5em 0;
+}
+
+input:focus{
+	background-color: #e5f5c4;
+}
+
+input:invalid{
+	background-color: #ffcccc;
+	color: #aa3939;
+}
+input:invalid::placeholder {
+		color: #aa3939;
+}
+
+input:valid{
+	background-color: #f2fae2;
+}
+
+input:required{
+	border-bottom: 3px solid #aa3939;
+}
+
+textarea{
+	width: 98%;
+	height: 5em;
+	border-radius: 5px;
+	padding: .5em;
+}
+
+textarea:focus{
+	background-color: #e5f5c4;
+}
+
+select{
+	border-radius: 5px;
+	width: 100%;
+	padding: .5em;
+}
+
+fieldset{
+	border-radius: 5px;
+	padding: 1em;
+}
+
+input#mail2[type=email] {
+	-webkit-appearance: none;
+	appearance: none;
+	width: 100%;
+	border: 1px solid #333;
+	margin: 0;
+	font-family: inherit;
+	font-size: 90%;
+	box-sizing: border-box;
+}
+/* This is our style for the invalid fields */
+input#mail2:invalid {
+	border-color: #900;
+	background-color: #FDD;
+}
+
+input#mail2:focus:invalid {
+	outline: none;
+}
+/* This is the style of our error messages */
+.form-error {
+	width: 100%;
+	padding: 0;
+	font-size: 80%;
+	color: white;
+	background-color: #900;
+	border-radius: 0 0 5px 5px;
+	box-sizing: border-box;
+}
+
+.form-error.active {
+	padding: 0.3em;
+}
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+                                            LISTS 
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+li{
+	list-style: none;
+	padding-left: .75em;
+}
+
+ul{
+	margin: 0;
+	padding: 0;
+}

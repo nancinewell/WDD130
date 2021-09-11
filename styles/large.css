@@ -1,0 +1,66 @@
+@charset "utf-8";
+/* CSS Document */
+
+@media only screen and (min-width: 600px) {
+  
+	
+	
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+										LAYOUT 
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+main{
+	display: grid;
+	grid-template-areas: "nav main main main";
+	padding: .5em;
+}
+
+nav{
+	grid-area: nav;
+	padding: .5em;
+}
+
+main section.mainsection{
+	grid-area: main;
+	padding: .5em;
+}
+	
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+										NAVIGATION 
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+#menu-check, #menu{
+	display: none;
+}
+
+
+.topnav{
+	position: relative;
+	opacity: 100%;
+}
+
+	
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+										INTERACTIVE PIECES 
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+	
+	input, textarea, select {
+		max-width: 40em;
+		display: block;
+	}
+	
+	#powers input, #char-type>input{
+		display: inline;
+		margin-right: 30%;
+		float: right;
+}
+
+	video {
+		max-width: 600px;
+	}
+	#video-controls {
+		height: 30px;
+		max-width: 300px;
+	}
+/*DON'T DELETE THIS ONE!*/	
+}
