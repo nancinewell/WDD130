@@ -283,7 +283,9 @@ ul{
                                             IMAGES 
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
  img{
-    margin: 1em;
+    margin: 1em 0;
     width: 100%; 
-    max-width: 500px;
+    max-width: 250px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px #4e4e4e;
  }
